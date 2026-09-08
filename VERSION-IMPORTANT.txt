@@ -1,0 +1,7 @@
+Tool: 2.1.0-experimental
+Use marvis-device-id-tool-v2.1.zip. Update run.cmd AND marvis_device_id.py together.
+Menu 6 closes exactly the six requested Marvis process names after confirmation. Menu 0 exits.
+Every action returns to the menu; service recovery and lock release happen per action.
+Keep the entire backups directory. Never restore v2 backups with v1.
+verification-v2.1.json is the current test record. Older ZIP/RAR and verification files are historical.
+No live process termination or GUID/registry changes were performed by this menu-update task.

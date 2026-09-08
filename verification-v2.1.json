@@ -1,0 +1,48 @@
+{
+  "tool_version": "2.1.0-experimental",
+  "created_local": "2026-09-08T17:09:25.341325+08:00",
+  "python_tested": "3.13.2",
+  "unit_tests": {
+    "run": 52,
+    "failures": 0,
+    "errors": 0,
+    "passed": true
+  },
+  "powershell_integration": {
+    "mock_processes_only": true,
+    "normal_close_and_force_fallback_tested": true,
+    "service_and_outside_directory_excluded": true,
+    "real_process_termination": false
+  },
+  "cmd_menu_smoke": {
+    "sequence": [
+      "6",
+      "NO",
+      "1",
+      "7",
+      "0"
+    ],
+    "menu_displays": 4,
+    "exit_code": 0,
+    "passed": true
+  },
+  "real_guid_file_and_svid_unchanged": true,
+  "live_guid_change_executed": false,
+  "live_marvis_close_executed": false,
+  "prior_user_report": "User reported v2 worked on this machine; no new login-stability claim is made by the v2.1 menu update.",
+  "process_allowlist": [
+    "MarvisKnowledgebase.exe",
+    "MarvisDlSvr.exe",
+    "MarvisAgent.exe",
+    "MarvisHost.exe",
+    "MarvisMCP.exe",
+    "Marvis.exe"
+  ],
+  "hashes": {
+    "marvis_device_id.py": "57355944fdba04c74df6b3edbceeb8258320444d6776026696df270b9e8a50d4",
+    "test_marvis_device_id.py": "8f04a9073d4460745f46a947bc3066b35ffc24f021298a51ca5809d6b29916b0",
+    "run.cmd": "1f7f6d7e35871e8713ce01fa9395839bb9ebdb7857034b490119ef5d78a9566f",
+    "README.md": "60842ebc90649352294707696374bf1b69f79e6d3607f16290c78df45eca0f05",
+    "VERSION-IMPORTANT.txt": "fbbf76580e14307cbeab45ae832d150e11e75a9ee6ce3564e7a7d54d8900058d"
+  }
+}
