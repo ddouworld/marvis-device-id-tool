@@ -1,4 +1,4 @@
-"""Marvis 1.60.2500.191 app-GUID manager. Windows/Python 3.10+, stdlib only.
+"""Marvis 1.60.2800.220 app-GUID manager. Windows/Python 3.10+, stdlib only.
 Experimental v2: synchronize the Beacon GUID and two Marvis Env/svid values.
 Local consistency is NOT proof of successful authentication or a stable session.
 No Windows MachineGuid, QIMEI, credentials, EXE, DLL or validation branch is patched.
@@ -10,17 +10,17 @@ import re, subprocess, sys, tempfile, time, uuid, winreg
 from datetime import datetime
 
 TOOL_VERSION = '2.1.0-experimental'
-VERSION = '1.60.2500.191'
-ROOT = Path(r'C:\Program Files\Tencent\Marvis\Application')
+VERSION = '1.60.2800.220'
+ROOT = Path(r'D:\Program Files\Tencent\Marvis\Application')
 INSTALL = ROOT / VERSION
 CACHE = Path(os.environ.get('APPDATA', '')) / 'Tencent/beacon/beacon_marvis.db'
 HOME = Path(__file__).resolve().parent
 BACKUPS = HOME / 'backups'
 EXPECTED_FILES = {
-    'beacon_sdk.dll': 'e04c33bd3705bdb4fdc1f1a586d86703af8a5ca54fc7d9667844e2e0f950c7a6',
-    'Marvis.exe': '1b50d9551f77d569dbf5bd32f8a3fa774990ee4d73afc99971c2fecdc0beee28',
-    'MarvisSvr.exe': 'ce83d0cb87f8ca2b93a9a29e8eaa635965cdd0052e9b88b0449da6254d5a9932',
-    'base.dll': '6c903ae782c7bd261345ec7332abd8b2504815f12706958d11b5c7a30abc539f',
+    'beacon_sdk.dll': '6ec162bd70b682e28c707bc0133df15efde644e2399a0ddee9b96cb4cc041c27',
+    'Marvis.exe': 'e821aa87dca7aeb138ab7691e61365a80b14ee33f64abb796f46ec1bf2af80d1',
+    'MarvisSvr.exe': '7f4b9f5224d8858462b6883bdd0b0a3191c8f05bf3f2f7d33e92753b55772902',
+    'base.dll': '7d2a5b52ee952c55573e0b2b69134174c3b2ec17741a8a9828c40e4cb4665900',
 }
 EXPORT = '?BeaconDeviceId@BeaconClient@@SAAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ'
 DESCRIPTION = 'BeaconGuidData'
@@ -648,7 +648,7 @@ def menu_selection(choice):
 
 def menu():
     while True:
-        print('\nMarvis GUID + svid 同步工具 v2.1（实验版，仅支持 1.60.2500.191）')
+        print(f'\nMarvis GUID + svid 同步工具 v2.1（实验版，仅支持 {VERSION}）')
         print('每项执行后返回此菜单；只有选 0 才正常退出脚本。')
         print('1. 只读查看 GUID/svid 一致性\n2. 生成新 GUID 并同步 svid\n3. 自定义 GUID 并同步 svid\n4. 恢复最近一次事务（含 svid）\n5. 查看完整 GUID\n6. 关闭 Marvis（指定六种进程）\n7. 只读检查今天的登录日志\n0. 退出脚本')
         try:

@@ -1,6 +1,6 @@
 # Marvis GUID + svid 同步工具 v2.1（菜单更新版）
 
-**工具版本：2.1.0-experimental · 适配 Marvis：1.60.2500.191 · 日期：2026-09-08**
+**工具版本：2.1.0-experimental · 适配 Marvis：1.60.2800.220 · 安装目录：`D:\Program Files\Tencent\Marvis\Application\1.60.2800.220` · 日期：2026-09-28**
 
 ## 使用说明：
 
